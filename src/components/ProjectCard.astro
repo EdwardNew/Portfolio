@@ -1,0 +1,63 @@
+---
+export interface Props {
+    title: string;
+    image: string;
+    technologies: string[];
+    description: string;
+    seeMoreLink?: string;
+    viewSiteLink?: string;
+}
+
+const { title, image, technologies, description, seeMoreLink, viewSiteLink } =
+    Astro.props;
+---
+
+<div
+    class="rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200 group hover:cursor-pointer"
+>
+    <a href={seeMoreLink}>
+        <!-- Image -->
+        <img
+            src={image}
+            alt={title}
+            class="w-full h-auto aspect-[20/10] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+        />
+
+        <!-- Content -->
+        <div class="p-4">
+            <!-- Title -->
+            <h2 class="text-xl font-semibold text-gray-800">{title}</h2>
+
+            <!-- Technologies -->
+            <ul class="flex flex-wrap gap-2 mt-2">
+                {
+                    technologies.map((tech) => (
+                        <li class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">
+                            {tech}
+                        </li>
+                    ))
+                }
+            </ul>
+
+            <!-- Description -->
+            <p class="mt-4 text-gray-600 text-sm">{description}</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="px-4 py-3 flex gap-2">
+            <a
+                href={viewSiteLink}
+                target="_blank"
+                class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 text-center py-2 px-4 rounded transition duration-300"
+            >
+                View Site
+            </a>
+            <a
+                href={seeMoreLink}
+                class="flex-1 bg-blue-500 hover:bg-blue-600 text-white text-center py-2 px-4 rounded transition duration-300"
+            >
+                See More
+            </a>
+        </div>
+    </a>
+</div>
