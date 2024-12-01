@@ -1,6 +1,6 @@
 ---
 title: "Sungod 2024"
-image: "/src/assets/sgf.png"
+image: "https://edwardnew.netlify.app/assets/sgf.png"
 technologies:
     - Astro
     - Tailwind CSS

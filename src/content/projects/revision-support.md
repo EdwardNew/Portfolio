@@ -1,6 +1,6 @@
 ---
 title: "Revision Support"
-image: "/src/assets/revision-support.png"
+image: "https://edwardnew.netlify.app/assets/revision-support.png"
 technologies:
     - Astro
     - Tailwind CSS
