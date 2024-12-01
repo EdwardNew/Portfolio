@@ -6,6 +6,6 @@ technologies:
     - Tailwind CSS
     - JavaScript
 description: "A short description of the project. It highlights key features and technologies."
-seeMoreLink: "/projects/astro-project"
-viewSiteLink: "https://example.com"
+seeMoreLink: "/projects/tritonfest-wi24"
+viewSiteLink: "https://tritonfest.ucsd.edu/archive/winter24/"
 ---
