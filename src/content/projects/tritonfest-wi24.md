@@ -1,6 +1,6 @@
 ---
 title: "TritonFest Winter 2024"
-image: "https://edwardnew.netlify.app/assets/tf-wi24.png"
+image: "https://edwardnew.netlify.app/tf-wi24.png"
 technologies:
     - Astro
     - Tailwind CSS
