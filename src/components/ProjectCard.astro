@@ -6,10 +6,18 @@ export interface Props {
     description: string;
     seeMoreLink?: string;
     viewSiteLink?: string;
+    order?: number;
 }
 
-const { title, image, technologies, description, seeMoreLink, viewSiteLink } =
-    Astro.props;
+const {
+    title,
+    image,
+    technologies,
+    description,
+    seeMoreLink,
+    viewSiteLink,
+    order,
+} = Astro.props;
 
 import externalIcon from "../assets/external-icon.png";
 ---

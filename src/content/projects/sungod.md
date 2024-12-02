@@ -8,4 +8,5 @@ technologies:
 description: "A short description of the project. It highlights key features and technologies."
 seeMoreLink: "/projects/sungod"
 viewSiteLink: "https://sgf.ucsd.edu/2024/countdown/"
+order: 2
 ---

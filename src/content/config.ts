@@ -10,6 +10,7 @@ const projectCollection = defineCollection({
         description: z.string(), // A short description of the project
         seeMoreLink: z.string().optional(), // Link to see more about the project
         viewSiteLink: z.string().url().optional(), // Link to view the live site
+        order: z.number().optional(),
     }),
 });
 

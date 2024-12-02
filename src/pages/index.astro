@@ -4,7 +4,10 @@ import ProjectCard from "../components/ProjectCard.astro";
 import type { Props as ProjectCardProps } from "../components/ProjectCard.astro";
 
 import { getCollection } from "astro:content";
-const projects = await getCollection("projects");
+let projects = await getCollection("projects");
+projects = projects.sort(
+    (a, b) => (a.data.order ?? Infinity) - (b.data.order ?? Infinity)
+);
 
 type Project = {
     data: ProjectCardProps; // Use the imported Props interface for typing
@@ -36,6 +39,7 @@ type Project = {
                         description={project.data.description}
                         seeMoreLink={project.data.seeMoreLink}
                         viewSiteLink={project.data.viewSiteLink}
+                        order={project.data.order}
                     />
                 ))
             }

@@ -8,4 +8,5 @@ technologies:
 description: "A short description of the project. It highlights key features and technologies."
 seeMoreLink: "/projects/stride-24"
 viewSiteLink: "https://stride24.ucsddesign.co/"
+order: 1
 ---

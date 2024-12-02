@@ -2,8 +2,8 @@
 import { getCollection } from "astro:content";
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-    const blogEntries = await getCollection("projects");
-    return blogEntries.map((entry) => ({
+    const projects = await getCollection("projects");
+    return projects.map((entry) => ({
         params: { slug: entry.slug },
         props: { entry },
     }));
@@ -36,7 +36,7 @@ import Layout from "../../layouts/Layout.astro";
                 quae ea modi, eligendi voluptatem neque qui, eum animi culpa,
                 architecto tempora placeat accusamus facilis voluptates?
             </p>
-            <div class="mt-6 grid gap-6 grid-cols-1 md:grid-cols-3">
+            <div class="mt-6 grid gap-6 grid-cols-1 sm:grid-cols-3">
                 <div>
                     <h3 class="text-base font-bold">Key Results</h3>
                     <ul class="list-disc pl-5">
