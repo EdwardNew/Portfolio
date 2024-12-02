@@ -16,6 +16,108 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
-    <h1>{entry.data.title}</h1>
+    <main class="bg-gray-100 text-gray-900">
+        <div class="w-full h-64 rounded-lg shadow-lg flex justify-center">
+            <img
+                src={entry.data.image}
+                alt="Project preview"
+                class="w-auto h-full rounded-lg shadow-lg"
+            />
+        </div>
+        <section class="px-4 py-8">
+            <h1 class="text-3xl font-bold mb-4">
+                {entry.data.title}
+            </h1>
+            <p class="text-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                fuga veritatis explicabo sapiente suscipit illo culpa in
+                similique exercitationem numquam, atque delectus dolor
+                consequuntur voluptas et mollitia non dolorum. Vitae? Dolorum
+                quae ea modi, eligendi voluptatem neque qui, eum animi culpa,
+                architecto tempora placeat accusamus facilis voluptates?
+            </p>
+            <div class="mt-6 grid gap-6 grid-cols-1 md:grid-cols-3">
+                <div>
+                    <h3 class="text-base font-bold">Key Results</h3>
+                    <ul class="list-disc pl-5">
+                        <li>lorem ipsum blah blah blah</li>
+                        <li>lorem ipsum blah blah blah</li>
+                        <li>lorem ipsum blah blah blah</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold">Role & Timeline</h3>
+                    <ul class="list-disc pl-5">
+                        <li>lorem ipsum blah blah blah</li>
+                        <li>lorem ipsum blah blah blah</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold">Methods</h3>
+                    <p class="break-words">
+                        React ✦ Typescript ✦ GSAP ✦ SASS ✦ NextJS ✦ MongoDB ✦
+                        blah ✦ blah
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="p-4 pt-0">
+            <div>
+                <h2 class="text-2xl font-semibold mb-4">The Challenge</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quae, doloremque, veniam, temporibus expedita illo
+                    asperiores non nulla facilis repellendus pariatur obcaecati
+                    repudiandae aperiam dolorem harum. Ipsa labore amet omnis
+                    maiores. Tenetur, impedit? Repellat maxime quod itaque
+                    reprehenderit molestiae vero totam asperiores fuga placeat
+                    nihil tempora, doloribus laboriosam autem ipsum officiis
+                    eveniet porro dicta eius, nobis nostrum sit id omnis velit?
+                </p>
+            </div>
+            <div class="my-8">
+                <h2 class="text-2xl font-semibold my-4">
+                    Defining the Problem
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quae, doloremque, veniam, temporibus expedita illo
+                    asperiores non nulla facilis repellendus pariatur obcaecati
+                    repudiandae aperiam dolorem harum. Ipsa labore amet omnis
+                    maiores. Tenetur, impedit? Repellat maxime quod itaque
+                    reprehenderit molestiae vero totam asperiores fuga placeat
+                    nihil tempora, doloribus laboriosam autem ipsum officiis
+                    eveniet porro dicta eius, nobis nostrum sit id omnis velit?
+                </p>
+            </div>
+            <div class="my-8">
+                <h2 class="text-2xl font-semibold my-4">Impact</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quae, doloremque, veniam, temporibus expedita illo
+                    asperiores non nulla facilis repellendus pariatur obcaecati
+                    repudiandae aperiam dolorem harum. Ipsa labore amet omnis
+                    maiores. Tenetur, impedit? Repellat maxime quod itaque
+                    reprehenderit molestiae vero totam asperiores fuga placeat
+                    nihil tempora, doloribus laboriosam autem ipsum officiis
+                    eveniet porro dicta eius, nobis nostrum sit id omnis velit?
+                </p>
+            </div>
+            <div class="my-8">
+                <h2 class="text-2xl font-semibold my-4">Next Steps</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quae, doloremque, veniam, temporibus expedita illo
+                    asperiores non nulla facilis repellendus pariatur obcaecati
+                    repudiandae aperiam dolorem harum. Ipsa labore amet omnis
+                    maiores. Tenetur, impedit? Repellat maxime quod itaque
+                    reprehenderit molestiae vero totam asperiores fuga placeat
+                    nihil tempora, doloribus laboriosam autem ipsum officiis
+                    eveniet porro dicta eius, nobis nostrum sit id omnis velit?
+                </p>
+            </div>
+        </section>
+    </main>
+
     <Content />
 </Layout>
