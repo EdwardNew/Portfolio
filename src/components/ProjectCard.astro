@@ -23,9 +23,10 @@ import externalIcon from "../assets/external-icon.png";
 ---
 
 <div
-    class="rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200 group hover:cursor-pointer"
+    class="flex flex-col justify-between rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200 group hover:cursor-pointer"
 >
-    <a href={seeMoreLink}>
+    <a href={viewSiteLink} target="_blank">
+        <!-- <a href={seeMoreLink}> -->
         <!-- Image -->
         <img
             src={image}
@@ -55,7 +56,7 @@ import externalIcon from "../assets/external-icon.png";
 
         <!-- Buttons -->
         <div class="px-4 py-3 flex gap-2">
-            <a
+            <!-- <a
                 href={viewSiteLink}
                 target="_blank"
                 class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 text-center py-2 px-4 rounded transition duration-300"
@@ -74,6 +75,22 @@ import externalIcon from "../assets/external-icon.png";
                 class="flex-1 bg-blue-500 hover:bg-blue-600 text-white text-center py-2 px-4 rounded transition duration-300"
             >
                 See More
+            </a> -->
+
+            <a
+                href={viewSiteLink}
+                target="_blank"
+                class="flex-1 bg-blue-500 hover:bg-blue-600 text-white text-center py-2 px-4 rounded transition duration-300"
+            >
+                <span class="flex flex-row justify-center items-center gap-4">
+                    View Site
+                    <!-- <img
+                        src={externalIcon.src}
+                        height="15px"
+                        width="15px"
+                        alt=""
+                    /> -->
+                </span>
             </a>
         </div>
     </a>

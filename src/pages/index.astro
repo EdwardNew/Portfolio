@@ -15,22 +15,50 @@ type Project = {
 ---
 
 <Layout title="Home">
-    <section class="grid place-items-center p-4">
-        <h1>Seeing the vision is half the mission</h1>
-        <p class="mt-20">
-            Hi! I'm Edward, a software engineer driven by a passion for creating
-            and a hunger for learning, dedicated to bringing abstract ideas into
-            focus. Whether it's crafting innovative tools or tackling tough
-            problems, I'm all about using my skills to make an impact. Let's
-            build something extraordinary together.
-        </p>
-    </section>
+    <div class="max-w-screen-xl mx-auto">
+        <section class="grid place-items-center p-4 mt-24">
+            <div class="md:w-4/6">
+                <h1 class="text-pretty text-5xl sm:text-5xl lg:text-6xl">
+                    <i>Seeing the vision is half the mission</i>
+                </h1>
+                <p class="mt-20 text-xl">
+                    Hi! I'm Edward, a software engineer driven by a passion for
+                    creating and a hunger for learning, dedicated to bringing
+                    abstract ideas into focus. Whether it's crafting innovative
+                    tools or tackling tough problems, I'm all about using my
+                    skills to make an impact. Let's build something
+                    extraordinary together.
+                </p>
+            </div>
+        </section>
 
-    <section id="projects" class="p-4">
-        <h2>Cool Stuff I've Done!</h2>
+        <section id="projects" class="mt-20 p-4">
+            <h2 class="text-3xl font-semibold mb-6 md:text-4xl">
+                Cool Stuff I've Done!
+            </h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {
+                    projects.map((project: Project) => (
+                        <ProjectCard
+                            title={project.data.title}
+                            image={project.data.image}
+                            technologies={project.data.technologies}
+                            description={project.data.description}
+                            seeMoreLink={project.data.seeMoreLink}
+                            viewSiteLink={project.data.viewSiteLink}
+                            order={project.data.order}
+                        />
+                    ))
+                }
+            </div>
+        </section>
+
+        <!-- <section id="projects" class="p-4">
+            <h2>Coming Soon...</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {
                 projects.map((project: Project) => (
                     <ProjectCard
                         title={project.data.title}
@@ -39,31 +67,10 @@ type Project = {
                         description={project.data.description}
                         seeMoreLink={project.data.seeMoreLink}
                         viewSiteLink={project.data.viewSiteLink}
-                        order={project.data.order}
                     />
                 ))
             }
-        </div>
-    </section>
-
-    <section id="projects" class="p-4">
-        <h2>Coming Soon...</h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- {
-                projects.map((project: Project) => (
-                    <ProjectCard
-                        title={project.data.title}
-                        image={project.data.image}
-                        technologies={project.data.technologies}
-                        description={project.data.description}
-                        seeMoreLink={project.data.seeMoreLink}
-                        viewSiteLink={project.data.viewSiteLink}
-                    />
-                ))
-            } -->
-        </div>
-    </section>
-
-    <p class="p-4">made with love c:</p>
+            </div>
+        </section> -->
+    </div>
 </Layout>

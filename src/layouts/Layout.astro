@@ -1,4 +1,6 @@
 ---
+import "../assets/styles/global.css";
+
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
@@ -17,6 +19,7 @@ const { title } = Astro.props;
     <body>
         <Header />
         <slot />
+        <p class="my-8 px-4 text-center">made with love, by me! c:</p>
         <Footer />
     </body>
 </html>

@@ -1,14 +1,45 @@
 ---
 import LinkedinIcon from "../assets/linkedin.svg";
 import GithubIcon from "../assets/github.png";
+import Sparkles from "../assets/favicon.png";
 ---
+
+<script>
+    if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+        document.documentElement.classList.add("dark");
+    } else {
+        document.documentElement.classList.remove("dark");
+    }
+
+    function toggleDarkMode() {
+        const html = document.documentElement;
+        if (html.classList.contains("dark")) {
+            html.classList.remove("dark");
+            localStorage.theme = "light";
+        } else {
+            html.classList.add("dark");
+            localStorage.theme = "dark";
+        }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const toggleButton = document.getElementById("dark-mode-toggle");
+        toggleButton?.addEventListener("click", toggleDarkMode);
+    });
+</script>
 
 <!-- TODO: find svg github icon also need to match the border radiuses on the corners and colors --><!-- TODO: add favicon and ogimage -->
 <header class="w-full sticky top-0 left-0 p-4 border-b bg-white z-10">
     <nav class="flex flex-row justify-between">
         <a href="/" class="flex flex-row items-center gap-2">
-            <div class="font-bold font-serif">E</div>
-            <p class="font-serif font-semibold">Edward New</p>
+            <div>
+                <img src={Sparkles.src} height="20" width="20" alt="logo" />
+            </div>
+            <p class="font-heading font-semibold">Edward New</p>
         </a>
 
         <ul class="flex flex-row items-center gap-2">
@@ -36,8 +67,19 @@ import GithubIcon from "../assets/github.png";
                 >
             </li>
             <!-- TODO: think about adding a dark mode swtich/button -->
+            <!-- <button
+                id="dark-mode-toggle"
+                class="p-2 bg-gray-200 rounded dark:bg-gray-700"
+                aria-label="Toggle dark mode"
+            >
+                🌓
+            </button> -->
         </ul>
     </nav>
 </header>
 
-<style></style>
+<!-- <style>
+    header {
+        @apply bg-white dark:bg-gray-900 text-black dark:text-white;
+    }
+</style> -->

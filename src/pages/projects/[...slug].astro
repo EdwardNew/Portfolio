@@ -15,7 +15,7 @@ const { Content } = await entry.render();
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout>
+<Layout title={entry.data.title}>
     <main class="bg-gray-100 text-gray-900">
         <div class="w-full h-64 rounded-lg shadow-lg flex justify-center">
             <img
