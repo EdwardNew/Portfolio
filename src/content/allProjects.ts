@@ -144,7 +144,7 @@ export const comingSoon: ProjectLinkProps[] = [
         title: "OTA Main Site",
         image: "https://edwardnew.netlify.app/sgf.png",
         year: "2025",
-        organization: "UCSD ASCE",
+        organization: "Out The Archive",
         technologies: ["React", "Next.js", "Tailwind CSS"],
         viewSiteLink: "https://example.com/sgf-2024-main-site",
     },
