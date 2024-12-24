@@ -9,5 +9,5 @@ technologies:
 description: "Sun God Festival is the largest daytime music and arts festival at UC San Diego."
 seeMoreLink: "/projects/sungod"
 viewSiteLink: "https://sgf.ucsd.edu/2024/countdown/"
-order: 2
+order: 4
 ---

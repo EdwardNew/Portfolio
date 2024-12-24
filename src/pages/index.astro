@@ -33,13 +33,22 @@ type Project = {
         </section>
 
         <section id="projects" class="mt-20 p-4">
-            <h2 class="text-3xl font-semibold mb-6 md:text-4xl">
-                Cool Stuff I've Done!
-            </h2>
+            <span class="flex items-end justify-between mb-6">
+                <h2 class="text-3xl font-semibold md:text-4xl">
+                    Cool Stuff I've Done!
+                </h2>
+
+                <a
+                    href="/projects"
+                    class="hidden text-lg md:block hover:underline transition duration-300 ease-in-out"
+                >
+                    All Projects &rarr;
+                </a>
+            </span>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {
-                    projects.map((project: Project) => (
+                    projects.map((project) => (
                         <ProjectCard
                             title={project.data.title}
                             image={project.data.image}
@@ -48,29 +57,18 @@ type Project = {
                             seeMoreLink={project.data.seeMoreLink}
                             viewSiteLink={project.data.viewSiteLink}
                             order={project.data.order}
+                            caseStudy={project.data.keyResults ? true : false}
                         />
                     ))
                 }
             </div>
+
+            <a
+                href="/projects"
+                class="block text-lg text-right p-6 md:hidden hover:underline transition duration-300 ease-in-out"
+            >
+                All Projects &rarr;
+            </a>
         </section>
-
-        <!-- <section id="projects" class="p-4">
-            <h2>Coming Soon...</h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {
-                projects.map((project: Project) => (
-                    <ProjectCard
-                        title={project.data.title}
-                        image={project.data.image}
-                        technologies={project.data.technologies}
-                        description={project.data.description}
-                        seeMoreLink={project.data.seeMoreLink}
-                        viewSiteLink={project.data.viewSiteLink}
-                    />
-                ))
-            }
-            </div>
-        </section> -->
     </div>
 </Layout>
