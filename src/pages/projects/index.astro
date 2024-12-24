@@ -1,5 +1,23 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+
+import ProjectLink from "../../components/ProjectLink.astro";
+
+import { allProjects, comingSoon } from "../../content/allProjects";
 ---
 
-<Layout title="Projects" />
+<Layout title="Projects">
+    <section class="max-w-screen-xl mx-auto mt-8">
+        <h1 class="text-2xl font-semibold p-4 md:text-3xl">All Projects</h1>
+        <ul class="p-4">
+            {allProjects.map((project) => <ProjectLink {...project} />)}
+        </ul>
+
+        <h2 class="text-2xl font-semibold p-4 mt-20 md:text-3xl">
+            Coming Soon...
+        </h2>
+        <ul class="p-4">
+            {comingSoon.map((project) => <ProjectLink {...project} />)}
+        </ul>
+    </section>
+</Layout>

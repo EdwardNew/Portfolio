@@ -1,0 +1,57 @@
+---
+export interface Props {
+    title: string;
+    image: string;
+    year: string;
+    organization: string;
+    technologies: string[];
+    viewSiteLink?: string;
+}
+const { title, image, year, organization, technologies, viewSiteLink } =
+    Astro.props;
+
+import { ExternalLink } from "lucide-react";
+---
+
+<a
+    href={viewSiteLink}
+    class="block p-4 lg:p-8 group border-b-[1px] first:border-y-[1px]"
+    target="_blank"
+>
+    <li
+        class="grid grid-cols-4 gap-2 md:grid-cols-5 md:gap-4 justify-items-start items-center transition-transform duration-200 ease-in-out group-hover:scale-105"
+    >
+        <span class="flex col-span-2 gap-4 items-center">
+            <h4 class="font-bold text-pretty lg:text-xl group-hover:underline">
+                {title}
+            </h4>
+            <ExternalLink size={20} className="hidden group-hover:block " />
+        </span>
+
+        <p class="text-pretty">{organization}</p>
+        <p class="hidden md:block">{technologies.toString()}</p>
+        <p class="justify-self-center">{year}</p>
+    </li>
+</a>
+
+<!-- <a href={viewSiteLink} class="block group">
+    <div class="flex flex-col gap-4">
+        <div class="relative h-40 w-full">
+            <div class="absolute inset-0"></div>
+            {
+                image && (
+                    <div
+                        class="absolute inset-0 bg-cover bg-center"
+                        style={`background-image: url('${image}');`}
+                    />
+                )
+            }
+        </div>
+        <div class="space-y-2">
+            <h4 class="text-xl font-bold group-hover:underline">{title}</h4>
+            <p class="text-gray-500">{organization}</p>
+            <p class="text-gray-500">{technologies}</p>
+            <p class="text-gray-500">{year}</p>
+        </div>
+    </div>
+</a> -->
