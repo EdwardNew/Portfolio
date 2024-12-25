@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import LinkedinIcon from "../assets/linkedin.svg";
 import GithubIcon from "../assets/github.png";
 import Sparkles from "../assets/favicon.png";
+import { Mail } from "lucide-react";
 ---
 
 <script>
@@ -38,7 +39,7 @@ import Sparkles from "../assets/favicon.png";
     <nav class="flex flex-row justify-between">
         <a
             href="/"
-            class="flex flex-row items-center gap-2 group hover:scale-110 transition-transform ease-in-out duration-300"
+            class="flex flex-row items-center gap-2 md:hidden group hover:scale-110 transition-transform ease-in-out duration-300"
         >
             <Image
                 src={Sparkles}
@@ -49,6 +50,42 @@ import Sparkles from "../assets/favicon.png";
             />
             <p class="font-heading font-semibold">Edward New</p>
         </a>
+
+        <ul class="hidden md:flex flex-row gap-8 items-center">
+            <li class="me-4">
+                <a
+                    href="/"
+                    class="flex flex-row items-center gap-2 group hover:scale-110 transition-transform ease-in-out duration-300"
+                >
+                    <Image
+                        src={Sparkles}
+                        height="20"
+                        width="20"
+                        alt="logo"
+                        loading="eager"
+                    />
+                    <p class="font-heading font-semibold">Edward New</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="/projects" class="hover:underline underline-offset-2"
+                    ><p>Projects</p></a
+                >
+            </li>
+            <li>
+                <a href="/about" class="hover:underline underline-offset-2"
+                    ><p>About</p></a
+                >
+            </li>
+            <li>
+                <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    class="hover:underline underline-offset-2"><p>Resume</p></a
+                >
+            </li>
+        </ul>
 
         <ul class="flex flex-row items-center gap-2">
             <li>
@@ -77,6 +114,14 @@ import Sparkles from "../assets/favicon.png";
                         class="hover:scale-110 transition-transform"
                     /></a
                 >
+            </li>
+            <li class="hidden md:block">
+                <a
+                    href="mailto:edwardznew@gmail.com"
+                    class="hover:underline underline-offset-2 bg-gray-950 block rounded-[0.2rem] p-0.5 px-[0.75] hover:scale-110 transition-transform"
+                >
+                    <Mail color="white" className="p-0.5" />
+                </a>
             </li>
             <!-- TODO: think about adding a dark mode swtich/button -->
             <!-- <button
