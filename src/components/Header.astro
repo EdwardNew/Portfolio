@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import LinkedinIcon from "../assets/linkedin.svg";
 import GithubIcon from "../assets/github.png";
 import Sparkles from "../assets/favicon.png";
@@ -37,7 +38,7 @@ import Sparkles from "../assets/favicon.png";
     <nav class="flex flex-row justify-between">
         <a href="/" class="flex flex-row items-center gap-2">
             <div>
-                <img src={Sparkles.src} height="20" width="20" alt="logo" />
+                <Image src={Sparkles} height="20" width="20" alt="logo" />
             </div>
             <p class="font-heading font-semibold">Edward New</p>
         </a>
@@ -48,8 +49,8 @@ import Sparkles from "../assets/favicon.png";
                     href="https://www.linkedin.com/in/edward-new/"
                     target="_blank"
                 >
-                    <img
-                        src={LinkedinIcon.src}
+                    <Image
+                        src={LinkedinIcon}
                         height="32"
                         width="32"
                         alt="Linkedin"
@@ -58,8 +59,8 @@ import Sparkles from "../assets/favicon.png";
             </li>
             <li>
                 <a href="https://github.com/EdwardNew" target="_blank">
-                    <img
-                        src={GithubIcon.src}
+                    <Image
+                        src={GithubIcon}
                         height="27"
                         width="27"
                         alt="Linkedin"

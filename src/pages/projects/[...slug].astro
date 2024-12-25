@@ -15,6 +15,7 @@ const { Content } = await entry.render();
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import Image from "astro/components/Image.astro";
 ---
 
 <Layout title={entry.data.title}>
@@ -55,9 +56,11 @@ import Prose from "../../components/Prose.astro";
 
                 <!-- Thumbnail / Image -->
                 <div>
-                    <img
+                    <Image
                         src={entry.data.image}
                         alt={entry.data.title}
+                        width={432}
+                        height={227}
                         class="w-full h-auto rounded-lg shadow-lg mb-6"
                     />
                     <!-- Role and Timeline -->
