@@ -1,112 +1,129 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Headshot from "../assets/headshot.jpg";
+import visionBoardDesktop from "../assets/vision-board-desktop.png";
+import visionBoardMobile from "../assets/vision-board-mobile.png";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="About">
-    <section class="p-6 bg-white text-gray-800">
-        <h1 class="text-4xl font-bold mb-6 text-center md:text-5xl lg:text-6xl">
-            Me at a Glance
-        </h1>
-        <div class="flex justify-center mb-6">
-            <img
-                src={Headshot.src}
-                alt="Edward's headshot"
-                class="w-full h-auto sm:w-4/6 md:w-4/6 lg:w-3/6 lg:max-w-[500px] rounded-2xl object-cover shadow-lg"
-            />
-        </div>
-        <p
-            class="text-lg leading-relaxed mb-10 text-center max-w-4xl mx-auto md:text-xl lg:mb-12"
-        >
-            Hi, thanks for stopping by my corner of the internet! I'm Edward — a
-            software engineer fueled by curiosity, creativity, and a love for
-            learning. I thrive on helping people see their ideas clearly and
-            achieve their goals one pixel, byte, and line of code at a time.
-        </p>
-
-        <div class="space-y-10 max-w-5xl mx-auto md:space-y-12">
-            <div>
-                <h2 class="text-2xl font-semibold mb-4 md:text-3xl">
-                    A Multidisciplinary Developer
-                </h2>
-                <p class="text-lg leading-relaxed mb-4 md:text-xl">
-                    I'm currently completing my degree in Data Science and
-                    Math-CS at UC San Diego, and my journey as a developer has
-                    been anything but linear. Along the way, I've worn many
-                    hats:
-                </p>
-                <ul class="list-disc list-outside space-y-3 pl-6 md:pl-12">
-                    <li>
-                        <strong>Frontend Engineer:</strong> Crafting intuitive user
-                        interfaces that bring designs to life.
-                    </li>
-                    <li>
-                        <strong>Full Stack Developer:</strong> Building end-to-end
-                        applications that solve real-world problems.
-                    </li>
-                    <li>
-                        <strong>Data Scientist:</strong> Harnessing the power of
-                        data to uncover insights and drive decisions.
-                    </li>
-                    <li>
-                        <strong>Creative:</strong> Blending logic with imagination
-                        to approach challenges from fresh perspectives.
-                    </li>
-                </ul>
+    <main class="flex flex-col items-center">
+        <section class="p-6 bg-white text-gray-800">
+            <h1
+                class="text-4xl font-bold mb-6 text-center md:text-5xl lg:text-6xl"
+            >
+                Me at a Glance
+            </h1>
+            <div class="flex justify-center mb-6">
+                <img
+                    src={Headshot.src}
+                    alt="Edward's headshot"
+                    class="w-full h-auto sm:w-4/6 md:w-4/6 lg:w-3/6 lg:max-w-[500px] rounded-2xl object-cover shadow-lg"
+                />
             </div>
+            <p
+                class="text-lg leading-relaxed mb-10 text-center max-w-4xl mx-auto md:text-xl lg:mb-12"
+            >
+                Hi, thanks for stopping by my corner of the internet! I'm Edward
+                — a software engineer fueled by curiosity, creativity, and a
+                love for learning. I thrive on helping people see their ideas
+                clearly and achieve their goals one pixel, byte, and line of
+                code at a time.
+            </p>
 
-            <div>
-                <h2 class="text-2xl font-semibold mb-4 md:text-3xl">
-                    What Drives Me
-                </h2>
-                <p class="text-lg leading-relaxed mb-4 md:text-xl">
-                    I'm passionate about helping people bring their visions to
-                    life. To me, this means:
-                </p>
-                <ul class="list-disc list-outside space-y-3 pl-6 md:pl-12">
-                    <li>
-                        Empathizing with clients and users to truly understand
-                        their needs.
-                    </li>
-                    <li>
-                        Believing in the power of ideas, no matter how ambitious
-                        they may seem.
-                    </li>
-                    <li>
-                        Turning concepts into reality through thoughtful design,
-                        strong technical foundations, and a sprinkle of
-                        creativity.
-                    </li>
-                </ul>
-                <p class="text-lg leading-relaxed mt-6 md:text-xl">
-                    I'm always seeking new challenges, pushing boundaries, and
-                    testing limits to grow as a developer and make a positive
-                    difference in the world—bit by bit.
-                </p>
+            <div class="space-y-10 max-w-5xl mx-auto md:space-y-12">
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 md:text-3xl">
+                        A Multidisciplinary Developer
+                    </h2>
+                    <p class="text-lg leading-relaxed mb-4 md:text-xl">
+                        I'm currently completing my degree in Data Science and
+                        Math-CS at UC San Diego, and my journey as a developer
+                        has been anything but linear. Along the way, I've worn
+                        many hats:
+                    </p>
+                    <ul class="list-disc list-outside space-y-3 pl-6 md:pl-12">
+                        <li>
+                            <strong>Frontend Engineer:</strong> Crafting intuitive
+                            user interfaces that bring designs to life.
+                        </li>
+                        <li>
+                            <strong>Full Stack Developer:</strong> Building end-to-end
+                            applications that solve real-world problems.
+                        </li>
+                        <li>
+                            <strong>Data Scientist:</strong> Harnessing the power
+                            of data to uncover insights and drive decisions.
+                        </li>
+                        <li>
+                            <strong>Creative:</strong> Blending logic with imagination
+                            to approach challenges from fresh perspectives.
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 md:text-3xl">
+                        What Drives Me
+                    </h2>
+                    <p class="text-lg leading-relaxed mb-4 md:text-xl">
+                        I'm passionate about helping people bring their visions
+                        to life. To me, this means:
+                    </p>
+                    <ul class="list-disc list-outside space-y-3 pl-6 md:pl-12">
+                        <li>
+                            Empathizing with clients and users to truly
+                            understand their needs.
+                        </li>
+                        <li>
+                            Believing in the power of ideas, no matter how
+                            ambitious they may seem.
+                        </li>
+                        <li>
+                            Turning concepts into reality through thoughtful
+                            design, strong technical foundations, and a sprinkle
+                            of creativity.
+                        </li>
+                    </ul>
+                    <p class="text-lg leading-relaxed mt-6 md:text-xl">
+                        I'm always seeking new challenges, pushing boundaries,
+                        and testing limits to grow as a developer and make a
+                        positive difference in the world—bit by bit.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 md:text-3xl">
+                        Beyond the Code
+                    </h2>
+                    <p class="text-lg leading-relaxed mb-4 md:text-xl">
+                        When I'm not coding, you might find me:
+                    </p>
+                    <ul class="list-disc list-outside space-y-3 pl-6 md:pl-12">
+                        <li>Learning a new song on the guitar</li>
+                        <li>Making cute clay trinkets</li>
+                        <li>Hunting for my next sweet treat</li>
+                    </ul>
+                </div>
             </div>
+        </section>
 
-            <div>
-                <h2 class="text-2xl font-semibold mb-4 md:text-3xl">
-                    Beyond the Code
-                </h2>
-                <p class="text-lg leading-relaxed mb-4 md:text-xl">
-                    When I'm not coding, you might find me:
-                </p>
-                <ul class="list-disc list-outside space-y-3 pl-6 md:pl-12">
-                    <li>Watching the latest Formula 1 race</li>
-                    <li>Embroidering Snoopy onto my clothes</li>
-                    <li>Learning a new song on the guitar</li>
-                </ul>
+        <section class="md:mt-6 p-6 max-w-6xl">
+            <h2 class="text-2xl font-semibold text-center md:text-4xl">
+                My Vision Board
+            </h2>
+            <div class="text-center">
+                <Image
+                    src={visionBoardDesktop}
+                    alt="collage of images"
+                    class="hidden md:block"
+                />
+                <Image
+                    src={visionBoardMobile}
+                    alt="collage of images"
+                    class="block md:hidden"
+                />
             </div>
-        </div>
-    </section>
-
-    <!-- <section
-        class="p-6 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100"
-    >
-        <h2 class="text-2xl font-semibold text-center mb-6 md:text-3xl">
-            My Vision Board
-        </h2>
-        <div class="text-center">coming soon...</div>
-    </section> -->
+        </section>
+    </main>
 </Layout>
