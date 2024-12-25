@@ -36,10 +36,17 @@ import Sparkles from "../assets/favicon.png";
 <!-- TODO: find svg github icon also need to match the border radiuses on the corners and colors --><!-- TODO: add favicon and ogimage -->
 <header class="w-full sticky top-0 left-0 p-4 border-b bg-white z-10">
     <nav class="flex flex-row justify-between">
-        <a href="/" class="flex flex-row items-center gap-2">
-            <div>
-                <Image src={Sparkles} height="20" width="20" alt="logo" />
-            </div>
+        <a
+            href="/"
+            class="flex flex-row items-center gap-2 group hover:scale-110 transition-transform ease-in-out duration-300"
+        >
+            <Image
+                src={Sparkles}
+                height="20"
+                width="20"
+                alt="logo"
+                loading="eager"
+            />
             <p class="font-heading font-semibold">Edward New</p>
         </a>
 
@@ -54,6 +61,8 @@ import Sparkles from "../assets/favicon.png";
                         height="32"
                         width="32"
                         alt="Linkedin"
+                        loading="eager"
+                        class="hover:scale-110 transition-transform"
                     /></a
                 >
             </li>
@@ -63,7 +72,9 @@ import Sparkles from "../assets/favicon.png";
                         src={GithubIcon}
                         height="27"
                         width="27"
-                        alt="Linkedin"
+                        alt="Github"
+                        loading="eager"
+                        class="hover:scale-110 transition-transform"
                     /></a
                 >
             </li>
