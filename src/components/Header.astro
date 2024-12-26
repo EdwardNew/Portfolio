@@ -4,35 +4,8 @@ import LinkedinIcon from "../assets/linkedin.svg";
 import GithubIcon from "../assets/github.png";
 import Sparkles from "../assets/favicon.png";
 import { Mail } from "lucide-react";
+import { DarkModeToggle } from "../components/DarkModeToggle";
 ---
-
-<script>
-    if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-        document.documentElement.classList.add("dark");
-    } else {
-        document.documentElement.classList.remove("dark");
-    }
-
-    function toggleDarkMode() {
-        const html = document.documentElement;
-        if (html.classList.contains("dark")) {
-            html.classList.remove("dark");
-            localStorage.theme = "light";
-        } else {
-            html.classList.add("dark");
-            localStorage.theme = "dark";
-        }
-    }
-
-    window.addEventListener("DOMContentLoaded", () => {
-        const toggleButton = document.getElementById("dark-mode-toggle");
-        toggleButton?.addEventListener("click", toggleDarkMode);
-    });
-</script>
 
 <!-- TODO: find svg github icon also need to match the border radiuses on the corners and colors --><!-- TODO: add favicon and ogimage -->
 <header class="w-full sticky top-0 left-0 p-4 border-b bg-white z-10">
@@ -88,6 +61,12 @@ import { Mail } from "lucide-react";
         </ul>
 
         <ul class="flex flex-row items-center gap-2">
+            <span
+                class="flex gap-2 after:w-px after:h-6 after:bg-gray-300 after:block"
+            >
+                <DarkModeToggle client:load />
+            </span>
+
             <li>
                 <a
                     href="https://www.linkedin.com/in/edward-new/"
@@ -123,20 +102,14 @@ import { Mail } from "lucide-react";
                     <Mail color="white" className="p-0.5" />
                 </a>
             </li>
-            <!-- TODO: think about adding a dark mode swtich/button -->
-            <!-- <button
-                id="dark-mode-toggle"
-                class="p-2 bg-gray-200 rounded dark:bg-gray-700"
-                aria-label="Toggle dark mode"
-            >
-                🌓
-            </button> -->
         </ul>
     </nav>
 </header>
 
-<!-- <style>
-    header {
-        @apply bg-white dark:bg-gray-900 text-black dark:text-white;
+<style>
+    header,
+    body,
+    section {
+        @apply bg-white dark:bg-neutral-800 text-black dark:text-white;
     }
-</style> -->
+</style>
