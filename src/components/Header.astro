@@ -8,10 +8,11 @@ import Sparkles from "../assets/sparkles.svg";
 import SparklesDark from "../assets/sparkles-dark.svg";
 import Mail from "../assets/mail.svg";
 import MailDark from "../assets/mail-dark.svg";
-import { DarkModeToggle } from "../components/DarkModeToggle";
+// import { DarkModeToggle } from "../components/DarkModeToggle";
+import DarkModeToggle from "./DarkModeToggle.astro";
 ---
 
-<!-- TODO: find svg github icon also need to match the border radiuses on the corners and colors --><!-- TODO: add favicon and ogimage -->
+<!-- TODO: add ogimage -->
 <header class="w-full sticky top-0 left-0 p-4 border-b bg-white z-10">
     <nav class="flex flex-row justify-between">
         <a
@@ -86,7 +87,7 @@ import { DarkModeToggle } from "../components/DarkModeToggle";
             <span
                 class="flex gap-2 after:w-px after:h-6 after:bg-gray-300 after:block"
             >
-                <DarkModeToggle client:load />
+                <DarkModeToggle />
             </span>
 
             <li>
