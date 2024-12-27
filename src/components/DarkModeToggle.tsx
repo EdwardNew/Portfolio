@@ -35,14 +35,14 @@ export function DarkModeToggle() {
 
     return (
         <button
-            className="relative inline-flex h-[1.625rem] w-11 items-center rounded-full border-[1px] border-gray-400 bg-gray-200 dark:bg-gray-800 transition-colors duration-300"
+            className="relative inline-flex h-[1.625rem] w-11 items-center rounded-full border-[1px] border-gray-400 bg-gray-200 dark:bg-neutral-700 transition-colors duration-300"
             onClick={toggleTheme}
             aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
         >
             <div
                 className={`flex h-5 w-5 items-center justify-center rounded-full bg-white shadow-md transition-transform duration-300 transform ${
                     isDarkMode ? "translate-x-5" : "translate-x-0.5"
-                } dark:bg-gray-700`}
+                } dark:bg-neutral-800`}
             >
                 {isDarkMode ? (
                     <Moon className="h-3 text-white" />

@@ -2,13 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Headshot from "../assets/headshot.jpg";
 import visionBoardDesktop from "../assets/vision-board-desktop.png";
+import visionBoardDesktopDark from "../assets/vision-board-desktop-dark.png";
 import visionBoardMobile from "../assets/vision-board-mobile.png";
+import visionBoardMobileDark from "../assets/vision-board-mobile-dark.png";
 import { Image } from "astro:assets";
 ---
 
 <Layout title="About">
     <main class="flex flex-col items-center">
-        <section class="p-6 bg-white text-gray-800">
+        <section class="p-6">
             <h1
                 class="text-4xl font-bold mb-6 text-center md:text-5xl lg:text-6xl"
             >
@@ -113,17 +115,29 @@ import { Image } from "astro:assets";
             <h2 class="text-2xl font-semibold text-center md:text-4xl">
                 My Vision Board
             </h2>
-            <div class="text-center">
+            <div>
                 <Image
                     src={visionBoardDesktop}
                     alt="collage of images"
-                    class="hidden md:block"
+                    class="hidden md:block md:dark:hidden"
+                    quality="max"
+                />
+                <Image
+                    src={visionBoardDesktopDark}
+                    alt="collage of images"
+                    class="hidden md:dark:block"
                     quality="max"
                 />
                 <Image
                     src={visionBoardMobile}
                     alt="collage of images"
-                    class="block md:hidden"
+                    class="block dark:hidden md:hidden"
+                    quality="max"
+                />
+                <Image
+                    src={visionBoardMobileDark}
+                    alt="collage of images"
+                    class="hidden dark:block md:dark:hidden"
                     quality="max"
                 />
             </div>

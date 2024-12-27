@@ -1,9 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import LinkedinIcon from "../assets/linkedin.svg";
-import GithubIcon from "../assets/github.png";
-import Sparkles from "../assets/favicon.png";
-import { Mail } from "lucide-react";
+import LinkedinIconDark from "../assets/linkedin-dark.svg";
+import GithubIcon from "../assets/github.svg";
+import GithubIconDark from "../assets/github-dark.svg";
+import Sparkles from "../assets/sparkles.svg";
+import SparklesDark from "../assets/sparkles-dark.svg";
+import Mail from "../assets/mail.svg";
+import MailDark from "../assets/mail-dark.svg";
 import { DarkModeToggle } from "../components/DarkModeToggle";
 ---
 
@@ -16,10 +20,19 @@ import { DarkModeToggle } from "../components/DarkModeToggle";
         >
             <Image
                 src={Sparkles}
-                height="20"
-                width="20"
+                height="16"
+                width="16"
                 alt="logo"
                 loading="eager"
+                class="dark:hidden"
+            />
+            <Image
+                src={SparklesDark}
+                height="16"
+                width="16"
+                alt="logo"
+                loading="eager"
+                class="hidden dark:block"
             />
             <p class="font-heading font-semibold">Edward New</p>
         </a>
@@ -32,10 +45,19 @@ import { DarkModeToggle } from "../components/DarkModeToggle";
                 >
                     <Image
                         src={Sparkles}
-                        height="20"
-                        width="20"
+                        height="16"
+                        width="16"
                         alt="logo"
                         loading="eager"
+                        class="dark:hidden"
+                    />
+                    <Image
+                        src={SparklesDark}
+                        height="16"
+                        width="16"
+                        alt="logo"
+                        loading="eager"
+                        class="hidden dark:block"
                     />
                     <p class="font-heading font-semibold">Edward New</p>
                 </a>
@@ -74,32 +96,60 @@ import { DarkModeToggle } from "../components/DarkModeToggle";
                 >
                     <Image
                         src={LinkedinIcon}
-                        height="32"
-                        width="32"
+                        height="26"
+                        width="26"
                         alt="Linkedin"
                         loading="eager"
-                        class="hover:scale-110 transition-transform"
-                    /></a
-                >
+                        class="rounded hover:scale-110 transition-transform dark:hidden"
+                    />
+                    <Image
+                        src={LinkedinIconDark}
+                        height="26"
+                        width="26"
+                        alt="Linkedin"
+                        loading="eager"
+                        class="rounded hover:scale-110 transition-transform hidden dark:block"
+                    />
+                </a>
             </li>
             <li>
                 <a href="https://github.com/EdwardNew" target="_blank">
                     <Image
                         src={GithubIcon}
-                        height="27"
-                        width="27"
+                        height="26"
+                        width="26"
                         alt="Github"
                         loading="eager"
-                        class="hover:scale-110 transition-transform"
-                    /></a
-                >
+                        class="rounded hover:scale-110 transition-transform dark:hidden"
+                    />
+                    <Image
+                        src={GithubIconDark}
+                        height="26"
+                        width="26"
+                        alt="Github"
+                        loading="eager"
+                        class="rounded hover:scale-110 transition-transform hidden dark:block"
+                    />
+                </a>
             </li>
             <li class="hidden md:block">
-                <a
-                    href="mailto:edwardznew@gmail.com"
-                    class="hover:underline underline-offset-2 bg-gray-950 block rounded-[0.2rem] p-0.5 px-[0.75] hover:scale-110 transition-transform"
-                >
-                    <Mail color="white" className="p-0.5" />
+                <a href="mailto:edwardznew@gmail.com" target="_blank">
+                    <Image
+                        src={Mail}
+                        height="26"
+                        width="26"
+                        alt="Mail"
+                        loading="eager"
+                        class="rounded hover:scale-110 transition-transform dark:hidden"
+                    />
+                    <Image
+                        src={MailDark}
+                        height="26"
+                        width="26"
+                        alt="Mail"
+                        loading="eager"
+                        class="rounded hover:scale-110 transition-transform hidden dark:block"
+                    />
                 </a>
             </li>
         </ul>
@@ -108,8 +158,9 @@ import { DarkModeToggle } from "../components/DarkModeToggle";
 
 <style>
     header,
+    footer,
     body,
     section {
-        @apply bg-white dark:bg-neutral-800 text-black dark:text-white;
+        @apply bg-white dark:bg-neutral-800 text-black dark:text-white dark:border-neutral-600;
     }
 </style>
