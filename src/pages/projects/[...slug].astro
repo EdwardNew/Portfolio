@@ -27,24 +27,30 @@ import Image from "astro/components/Image.astro";
                     <!-- Title -->
                     <div class="mb-6">
                         <h1
-                            class="text-2xl lg:text-4xl font-bold text-gray-900"
+                            class="text-2xl lg:text-4xl font-bold text-gray-900 dark:text-white"
                         >
                             {entry.data.title}
                         </h1>
-                        <p class="text-sm font-medium text-gray-600">
+                        <p
+                            class="text-sm font-medium text-gray-600 dark:text-gray-500"
+                        >
                             {entry.data.organization}
                         </p>
                     </div>
 
                     <!-- Description -->
-                    <p class="text-gray-700 mb-6">{entry.data.description}</p>
+                    <p class="text-gray-700 mb-6 dark:text-gray-300">
+                        {entry.data.description}
+                    </p>
 
                     <!-- Key Results -->
-                    <h2 class="text-lg font-semibold text-gray-800 mb-2">
+                    <h2
+                        class="text-lg font-semibold text-gray-800 mb-2 dark:text-white"
+                    >
                         Key Results
                     </h2>
                     <ul
-                        class="list-disc list-inside text-gray-700 space-y-2 mb-6"
+                        class="list-disc list-inside text-gray-700 space-y-2 mb-6 dark:text-gray-300"
                     >
                         {
                             entry.data.keyResults?.map((result: string) => (
@@ -68,25 +74,29 @@ import Image from "astro/components/Image.astro";
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div>
                             <h3
-                                class="text-sm font-medium text-gray-600 uppercase"
+                                class="text-sm font-medium text-gray-600 uppercase dark:text-white"
                             >
                                 Role
                             </h3>
-                            <p class="text-gray-800">{entry.data.role}</p>
+                            <p class="text-gray-800 dark:text-gray-300">
+                                {entry.data.role}
+                            </p>
                         </div>
                         <div>
                             <h3
-                                class="text-sm font-medium text-gray-600 uppercase"
+                                class="text-sm font-medium text-gray-600 uppercase dark:text-white"
                             >
                                 Timeline
                             </h3>
-                            <p class="text-gray-800">{entry.data.timeline}</p>
+                            <p class="text-gray-800 dark:text-gray-300">
+                                {entry.data.timeline}
+                            </p>
                         </div>
                     </div>
 
                     <!-- Skills -->
                     <h3
-                        class="text-sm font-medium text-gray-600 uppercase mb-2"
+                        class="text-sm font-medium text-gray-600 uppercase mb-2 dark:text-white"
                     >
                         Skills Used
                     </h3>
