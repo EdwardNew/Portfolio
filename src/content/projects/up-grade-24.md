@@ -1,6 +1,6 @@
 ---
 title: "Upgrade 2024"
-image: "https://edwardnew.netlify.app/upgrade.png"
+image: "https://edwardnew.netlify.app/upgrade24.png"
 # image: "https://upgrade24.ucsddesign.co/opengraph-image.png"
 technologies:
     - React
